@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/mnt/d/My Projects/Coding/Bootcamp work/Learning coding/Learning Units/Unit_27_Hatchways_Assessment_Twitter_Clone/Twitter-Clone/warbler/venv/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from gunicorn.app.wsgiapp import run
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(run())
